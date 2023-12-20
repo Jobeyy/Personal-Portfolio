@@ -7,24 +7,8 @@
   --secondary: #286086;
   --accent: #2f96da;
 }
+
 *{
   background-color: var(--background);
 }
 
-.nav{
-  display: grid;
-  grid-template-columns: 37% 10% 10% 38% auto;
-  width:100%;
-  background-color: var(--background);
-  color: var(--background);
-  
-}
-
-.nav-item{
-  width: 20%
-}
-
-#logo{
-  grid-row-start: 1;
-  
-}

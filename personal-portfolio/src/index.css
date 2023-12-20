@@ -1,12 +1,15 @@
-:root[data-theme="dark"] {
+:root{
   --text: #e6e8ea;
-  --background: #060809;
+  --background: #151719;
   --primary: #9cbdd3;
   --secondary: #286086;
   --accent: #2f96da;
 }
-
-
 *{
   background-color: var(--background);
+  color: var(--text);
+}
+
+#primary-color{
+  color: var(--accent)
 }
