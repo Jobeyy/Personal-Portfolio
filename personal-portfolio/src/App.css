@@ -1,14 +1,6 @@
 
 
-:root[data-theme="dark"] {
-  --text: #e6e8ea;
-  --background: #060809;
-  --primary: #9cbdd3;
-  --secondary: #286086;
-  --accent: #2f96da;
-}
 
-*{
-  background-color: var(--background);
-}
+
+
 

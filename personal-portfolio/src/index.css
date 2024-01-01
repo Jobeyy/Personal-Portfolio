@@ -13,3 +13,11 @@
 #primary-color{
   color: var(--accent)
 }
+
+.main-color{
+  color: var(--accent)
+}
+
+.box{
+  background-color: grey;
+}
