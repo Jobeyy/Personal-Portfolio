@@ -6,6 +6,7 @@
   --primary: #9cbdd3;
   --secondary: #286086;
   --accent: #2f96da;
+  --lighter: #242c31;
 }
 *{
   background-color: var(--background);
@@ -22,7 +23,16 @@
 }
 
 .box{
-  background-color: var(--secondary);
+  background-color: var(--lighter);
   border-radius: .5rem;
   border-color: var(--secondary);
+}
+#button-color{
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+#button-color:hover{
+  background-color: var(--accent);
+  color: var(--text);
 }

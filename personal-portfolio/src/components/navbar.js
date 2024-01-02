@@ -1,5 +1,5 @@
 
-export default function Navbar(){
+export function Navbar(){
     const linkedin = "https://www.linkedin.com/in/jobeyfarias/"
     const github = "https://github.com/Jobeyy"
     
@@ -24,7 +24,7 @@ export default function Navbar(){
                 </div>
                     
                 <div className="col-md-4 p-1">
-                  <button className="btn btn-outline-primary">Resume</button>
+                  <button className="btn btn-outline-primary" id="button-color">Resume</button>
                 </div>
               </div>
             </div>
