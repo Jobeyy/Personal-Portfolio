@@ -36,3 +36,18 @@
   background-color: var(--accent);
   color: var(--text);
 }
+
+.project-card{
+  width: 18rem;
+}
+
+#project-card-btn{
+  background-color: var(--accent) ;
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+#project-card-btn:hover{
+  background-color: transparent;
+  color: var(--accent);
+}
