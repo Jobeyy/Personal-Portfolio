@@ -12,8 +12,8 @@ export const MainContent = () => {
 
     return (
     <div className="main-info">
-        <div className="d-flex">
-            <div className="col-lg-6 mb-4 pl-5 pt-5  text-center"> 
+        <div className="container">
+            <div className="col-lg-6 text-start"> 
             <h1>Hello! I'm</h1>
             <h1>Jose <span className="main-color">Farias</span>
             </h1>
@@ -22,8 +22,8 @@ export const MainContent = () => {
             </h1>
             
             </div>
-            <div className="col-lg-6 p-5">
-            <p className='box text-start p-1'>
+            <div className="col-lg-6">
+            <p className='box text-start p-2'>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry asdlkfj asdlj asdfj asdfj asdf jl
             </p>
             </div>
