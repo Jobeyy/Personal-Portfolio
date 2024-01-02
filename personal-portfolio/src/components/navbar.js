@@ -24,7 +24,7 @@ export function Navbar(){
                 </div>
                     
                 <div className="col-md-4 p-1">
-                  <button className="btn btn-outline-primary" id="button-color">Resume</button>
+                  <button className="btn btn-outline-primary" id="nav-button-color">Resume</button>
                 </div>
               </div>
             </div>
