@@ -51,3 +51,11 @@
   background-color: transparent;
   color: var(--accent);
 }
+
+.technologies{
+  background-color: var(--lighter);
+}
+
+.tech{
+  
+}
