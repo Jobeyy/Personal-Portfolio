@@ -2,23 +2,26 @@ import { MainContent } from './components/MainContent';
 import ProjectCard from './components/ProjectCard';
 import { Navbar } from './components/navbar';
 import React from 'react'
+import profileImage from './imgs/test1.jpeg'
+import Technologies from './components/Technologies';
 
 function App() {
   const projectCardTest = [
     {
-      cardImage: "",
+      cardImage: profileImage,
       cardTitle: "Personal Portfolio",
       cardDescription: "This is testing description",
       cardLink: "https://github.com/Jobeyy/Personal-Portfolio"
     },
     {
-      cardImage: "",
+      cardImage: profileImage,
       cardTitle: "Inventory Management System",
       cardDescription: "This is a different description for inventory management system",
       cardLink: "https://github.com/Jobeyy/inventoryManagementSystem"
     }
   ]
   
+
   return (
     <div className='main-container p-0 m-0 flex-column'>
       <div className="row m-0 mb-5">
@@ -28,11 +31,20 @@ function App() {
         <MainContent />
       </div>
       <div className="technologies row w-100 mt-5 mb-5">
-        asdf
+        <Technologies/>
       </div>
       <div className="row w-100 mt-5 mb-5">
-        <ProjectCard/>
+      {projectCardTest.map((project, index) => (
+          <ProjectCard
+            key={index}
+            cardImage={project.cardImage}
+            cardTitle={project.cardTitle}
+            cardDescription={project.cardDescription}
+            cardLink={project.cardLink}
+          />
+        ))}
       </div>
+      
     </div>
   );
 }
