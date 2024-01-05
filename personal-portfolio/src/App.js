@@ -18,22 +18,31 @@ function App() {
       cardTitle: "Inventory Management System",
       cardDescription: "This is a different description for inventory management system",
       cardLink: "https://github.com/Jobeyy/inventoryManagementSystem"
+    },
+    {
+      cardImage: profileImage,
+      cardTitle: "Choose Your Own Adventure game",
+      cardDescription: "This is a different description for inventory management system",
+      cardLink: "https://github.com/Jobeyy/inventoryManagementSystem"
     }
   ]
   
 
   return (
     <div className='main-container p-0 m-0 flex-column'>
-      <div className="row m-0 mb-5">
+      <div className="row" id="nav-bar">
         <Navbar />
       </div>
-      <div className='row overflow-hidden w-100 h-50 mt-5 mb-5'>
+      <div className='row overflow-hidden w-100 main-content' >
         <MainContent />
       </div>
-      <div className="technologies row w-100 mt-5 mb-5">
+      <div className="mt-5">
+        <h5>Technologies:</h5>
+      </div>
+      <div className='tech h-75 '>
         <Technologies/>
       </div>
-      <div className="row w-100 mt-5 mb-5">
+      <div className="row w-100 mt-5 mb-5 justify-content-center">
       {projectCardTest.map((project, index) => (
           <ProjectCard
             key={index}

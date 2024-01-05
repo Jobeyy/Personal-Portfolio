@@ -52,10 +52,16 @@
   color: var(--accent);
 }
 
-.technologies{
-  background-color: var(--lighter);
+.main-content{
+  height: 350px;
+  margin-top: 20px;
 }
 
-.tech{
-  
+#nav-bar{
+  height: 150px;
+  margin-bottom: 40px;
 }
+
+
+
+

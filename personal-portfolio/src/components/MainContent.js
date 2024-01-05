@@ -13,7 +13,7 @@ export const MainContent = () => {
     <div className="container mt-0">
         <div className="row">
             <div className="col-lg-6 text-start"> 
-            <h3>Hello! I'm</h3>
+            <h4>Hello! I'm</h4>
             <h1>Jose <span className="main-color">Farias</span>
             </h1>
             <h1>

@@ -1,8 +1,7 @@
 import React from 'react'
 
 function ProjectCard( { cardImage, cardTitle, cardDescription, cardLink, key } ) {
-  console.log(cardTitle)
-
+  // if needed I have a key
   return (
     <div className="card project-card m-5">
       <img className="card-img-top" src={cardImage} alt="test"/>
