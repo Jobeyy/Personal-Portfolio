@@ -9,6 +9,8 @@ export const MainContent = () => {
         deleteSpeed: 40
     })
 
+
+
     return (
     <div className="container mt-0">
         <div className="row">
@@ -23,7 +25,10 @@ export const MainContent = () => {
             </div>
             <div className="col-lg-6">
             <p className='box text-start p-1'>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry asdlkfj asdlj asdfj asdfj asdf jl
+            I'm a passionate software and web developer skilled in creating captivating websites and robust software solutions.
+            With expertise in HTML, CSS, JavaScript, and various frameworks, 
+            I specialize in delivering seamless user experiences. Proficient in a diverse range of tools and technologies, 
+            I tackle projects with a collaborative spirit, ensuring optimal results. Check out my portfolio for a glimpse of my work, and let's connect to discuss how I can bring your ideas to life!                
             </p>
             </div>
         </div>
