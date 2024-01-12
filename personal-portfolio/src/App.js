@@ -2,7 +2,7 @@ import { MainContent } from './components/MainContent';
 import ProjectCard from './components/ProjectCard';
 import { Navbar } from './components/navbar';
 import React from 'react'
-import profileImage from './imgs/test1.jpeg'
+import profileImage from './imgs/invManagementSystem.png'
 import Technologies from './components/Technologies';
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
   
 
   return (
-    <div className='main-container p-0 m-0 flex-column'>
+    <div className='main-container p-0 m-0 flex-column main-background'>
       <div className="row" id="nav-bar">
         <Navbar />
       </div>
@@ -42,10 +42,11 @@ function App() {
       <div className='tech'>
         <Technologies/>
       </div>
-      <div className="row w-100 justify-content-center">
+      <div className="row justify-content-center">
       {projectCardTest.map((project, index) => (
+        
           <ProjectCard
-            key={index}
+            id={index}
             cardImage={project.cardImage}
             cardTitle={project.cardTitle}
             cardDescription={project.cardDescription}
