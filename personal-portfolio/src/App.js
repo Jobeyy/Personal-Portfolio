@@ -10,19 +10,19 @@ function App() {
     {
       cardImage: profileImage,
       cardTitle: "Personal Portfolio",
-      cardDescription: "This is testing description",
+      cardDescription: "Personal Portfolio made using Bootstrap and React to dynamically display previous projects in an engaging way. While providing a seamless navigation experience for visitors to explore my professional journey and projects.",
       cardLink: "https://github.com/Jobeyy/Personal-Portfolio"
     },
     {
       cardImage: profileImage,
       cardTitle: "Inventory Management System",
-      cardDescription: "This is a different description for inventory management system",
+      cardDescription: "Inventory Management system created in python used to help business manage their stock levels, and transactions. This system was made to simply the inventory tracking process and ensure that the right amount of stock is in hand.",
       cardLink: "https://github.com/Jobeyy/inventoryManagementSystem"
     },
     {
       cardImage: profileImage,
       cardTitle: "Choose Your Own Adventure game",
-      cardDescription: "This is a different description for inventory management system",
+      cardDescription: "Text-based adventure with this C++ console game, where players make pivotal decisions to navigate through a story. Immerse yourself in an interactive narrative, shaping your destiny with each choice in this dynamic and engaging choose-your-own-adventure experience.",
       cardLink: "https://github.com/Jobeyy/inventoryManagementSystem"
     }
   ]
@@ -36,13 +36,13 @@ function App() {
       <div className='row overflow-hidden w-100 main-content' >
         <MainContent />
       </div>
-      <div className="mt-5">
-        <h5>Technologies:</h5>
+      <div className="title">
+        <h5>Technologies: </h5>
       </div>
-      <div className='tech h-75 '>
+      <div className='tech'>
         <Technologies/>
       </div>
-      <div className="row w-100 mt-5 mb-5 justify-content-center">
+      <div className="row w-100 justify-content-center">
       {projectCardTest.map((project, index) => (
           <ProjectCard
             key={index}
