@@ -24,7 +24,7 @@ export const MainContent = () => {
             
             </div>
             <div className="col-lg-6">
-            <p className='box text-start p-1'>
+            <p className='box text-start p-3'>
             I'm a passionate software and web developer skilled in creating captivating websites and robust software solutions.
             With expertise in HTML, CSS, JavaScript, and various frameworks, 
             I specialize in delivering seamless user experiences. Proficient in a diverse range of tools and technologies, 
