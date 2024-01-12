@@ -4,7 +4,7 @@ function Technologies() {
 const imgSize = "75"
 
     return (
-        <div className='tech d-flex flex-row w-100 mb-5 justify-content-around'>
+        <div className='techno d-flex flex-row justify-content-around'>
           <div className='icons'>
             <img className="images"width={imgSize} height={imgSize} src="https://img.icons8.com/color/150/c-plus-plus-logo.png" alt="c-plus-plus-logo"/>
           </div>
