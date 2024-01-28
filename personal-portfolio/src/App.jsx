@@ -50,19 +50,19 @@ function App() {
   console.log(data)
   return (
     <div className='main-container p-0 m-0 flex-column main-background'>
-      <div className="row" id="nav-bar">
+      <div className="row overflow-hidden" id="nav-bar">
         <Navbar />
       </div>
       <div className='row overflow-hidden w-100 main-content' >
         <MainContent />
       </div>
-      <div className="title">
+      <div className="title overflow-hidden">
         <h5>Technologies: </h5>
       </div>
-      <div className='tech'>
+      <div className='tech overflow-hidden'>
         <Technologies/>
       </div>
-      <div className="row justify-content-center">
+      <div className="row justify-content-center overflow-hidden">
       {projectCardTest.map((project, index) => (
         
           <ProjectCard

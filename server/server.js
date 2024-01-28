@@ -21,7 +21,7 @@ app.use(cors());
 
 app.get('/data', async (req, res) => {
   const data = await db.all(`SELECT * FROM projectCard`)
-  res.json(data)
+	res.json(data)
 })
 
 
