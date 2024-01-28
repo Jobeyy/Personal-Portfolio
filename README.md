@@ -23,23 +23,14 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/Jobeyy/Personal-Portfolio">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Personal Portfolio</h3>
 
   <p align="center">
-    project_description
-    <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    Created a sleek and dynamic personal portfolio using React for the frontend and Node.js for the backend. This modern website features showcase's React components for detailed project displays, and a skills and expertise segment. Additionally, include a resume/CV section, and SQLite for database calls
   </p>
 </div>
 
@@ -57,14 +48,7 @@
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -79,7 +63,6 @@
 [![Product Name Screen Shot][product-screenshot]](https://github.com/Jobeyy/Personal-Portfolio)
 [![Product Name Screen Shot][product-screenshot2]](https://github.com/Jobeyy/Personal-Portfolio)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -97,22 +80,20 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+• Project Overview: Spearheaded the development of a sophisticated personal portfolio utilizing modern
+technologies such as React, Express.js, SQLite, and Node.js. The primary goal of this project was to
+showcase my skills and achievements dynamically and engagingly, providing visitors with an immersive
+experience while highlighting my expertise in web development.
+• Responsive Design: Implemented a responsive design approach using React to create an adaptive and
+visually appealing portfolio across various devices and screen sizes. Using advanced front-end technologies
+ensures an optimal user experience, emphasizing a commitment to accessibility and user-centric design.
+• Node.js Back-end: Developed a robust Node.js back-end to handle server-side logic and facilitate seamless
+communication between the client and server. Utilized Express.js to build a scalable and efficient server
+architecture, enhancing the overall performance and responsiveness of the portfolio.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -128,7 +109,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - JobeyFarias@gmail.com
+Jose Farias - JobeyFarias@gmail.com
 Project Link: [https://github.com/Jobeyy/Personal-Portfolio](https://github.com/Jobeyy)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -138,9 +119,8 @@ Project Link: [https://github.com/Jobeyy/Personal-Portfolio](https://github.com/
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* [React Documentation](https://react.dev/)
+* [SQLite Documentation](https://www.sqlite.org/docs.html)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
