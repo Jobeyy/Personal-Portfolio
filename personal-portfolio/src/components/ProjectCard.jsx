@@ -3,7 +3,7 @@ import React from 'react'
 function ProjectCard( { cardImage, cardTitle, cardDescription, cardLink, id } ) {
   // if needed I have a key
   return (
-    <div key={id} className="card project-card m-5">
+    <div key={id} className="card project-card m-5" id="projects">
       <img className="card-img-top" src={cardImage} alt="test"/>
       <div className="card-body">
         <h5 className="card-title">{cardTitle}</h5>

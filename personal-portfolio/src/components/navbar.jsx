@@ -1,3 +1,5 @@
+import {BrowserRouter} from "react-router-dom"
+import {HashLink as Link} from "react-router-hash-link"
 
 export function Navbar(){
     const linkedin = "https://www.linkedin.com/in/jobeyfarias/"
@@ -15,6 +17,7 @@ export function Navbar(){
     }
 
     return(
+      <BrowserRouter>
         <div className="w-100 mb-5">
           <nav className="bg-body-tertiary border-bottom p-2">
             <div className="container-fluid text-center">
@@ -23,7 +26,7 @@ export function Navbar(){
                   <h2 className="nav-brand text-light">J<span id="primary-color">F</span></h2>
                 </div>
                 <div className="col p-2">
-                  <a href="#" rel="noreferrer" target="_blank" className="project text-light">Project's</a>
+                  <Link className="project text-light"to="#projects">Project's</Link>
                 </div>
 
                 <div className="col p-2">
@@ -40,6 +43,7 @@ export function Navbar(){
             </div>
           </nav>
         </div>
+        </BrowserRouter>
     )
 }
 

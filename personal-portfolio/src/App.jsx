@@ -6,6 +6,8 @@ import React from 'react'
 import personalPortfolioImage from './imgs/personalPortfolio.png'
 import invManagementImage from './imgs/invManagementSystem.png'
 import chooseAdventureImage from './imgs/chooseAdventureGame.png'
+import {BrowserRouter} from "react-router-dom"
+import {HashLink as Link} from "react-router-hash-link"
 
 import axios from 'axios'
 import {useEffect, useState} from 'react'
@@ -49,33 +51,35 @@ function App() {
   
   console.log(data)
   return (
-    <div className='main-container p-0 m-0 flex-column main-background'>
-      <div className="row overflow-hidden" id="nav-bar">
-        <Navbar />
-      </div>
-      <div className='row overflow-hidden w-100 main-content' >
-        <MainContent />
-      </div>
-      <div className="title overflow-hidden">
-        <h5>Technologies: </h5>
-      </div>
-      <div className='tech overflow-hidden'>
-        <Technologies/>
-      </div>
-      <div className="row justify-content-center overflow-hidden">
-      {projectCardTest.map((project, index) => (
+    
+      <div className='main-container p-0 m-0 flex-column main-background'>
+        <div className="row overflow-hidden" id="nav-bar">
+          <Navbar />
+        </div>
+        <div className='row overflow-hidden w-100 main-content' >
+          <MainContent />
+        </div>
+        <div className="title overflow-hidden">
+          <h5>Technologies: </h5>
+        </div>
+        <div className='tech overflow-hidden'>
+          <Technologies/>
+        </div>
+        <div id="projectCards"className="row justify-content-center overflow-hidden">
+        {projectCardTest.map((project, index) => (
+          
+            <ProjectCard
+              id={index}
+              cardImage={project.cardImage}
+              cardTitle={project.cardTitle}
+              cardDescription={project.cardDescription}
+              cardLink={project.cardLink}
+            />
+          ))}
+        </div>
         
-          <ProjectCard
-            id={index}
-            cardImage={project.cardImage}
-            cardTitle={project.cardTitle}
-            cardDescription={project.cardDescription}
-            cardLink={project.cardLink}
-          />
-        ))}
       </div>
-      
-    </div>
+    
   );
 }
 
