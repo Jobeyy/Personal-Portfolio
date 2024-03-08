@@ -3,6 +3,16 @@ export function Navbar(){
     const linkedin = "https://www.linkedin.com/in/jobeyfarias/"
     const github = "https://github.com/Jobeyy"
     
+    const RESUME_FILE = 'http://localhost:3000/Jose_Farias_Resume__2024_.pdf'
+    const downloadedFile=(url)=>{
+      const fileName = url.split('/').pop()
+      const aTag = document.createElement('a')
+      aTag.href=url
+      aTag.setAttribute('download',fileName)
+      document.body.appendChild(aTag)
+      aTag.click()
+      aTag.remove()
+    }
 
     return(
         <div className="w-100 mb-5">
@@ -24,7 +34,7 @@ export function Navbar(){
                 </div>
                     
                 <div className="col-md-4 p-1">
-                  <button className="btn btn-outline-primary" id="nav-button-color">Resume</button>
+                  <button onClick={()=>{downloadedFile(RESUME_FILE)}} className="btn btn-outline-primary" id="nav-button-color">Resume</button>
                 </div>
               </div>
             </div>
