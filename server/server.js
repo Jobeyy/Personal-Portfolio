@@ -1,18 +1,11 @@
 const express = require('express')
 const path = require('path');
-const sqlite3 = require('sqlite3');
-const { open } = require('sqlite');
+const mongoose = require('mongoose')
 const cors = require('cors'); 
 
 const PORT = 8080
 
-let db;
-(async () => {
-	db = await open({
-		filename: 'database.sqlite',
-		driver: sqlite3.Database
-	});
-})();
+mongoose.connect('mongodb+srv://dbJobey:<password>@cluster0.gcyfftt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 
 const app = express()
 app.use(express.static(path.join(__dirname, 'static')));

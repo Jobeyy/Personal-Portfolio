@@ -5,16 +5,7 @@ export function Navbar(){
     const linkedin = "https://www.linkedin.com/in/jobeyfarias/"
     const github = "https://github.com/Jobeyy"
     
-    const RESUME_FILE = 'http://localhost:3000/Jose_Farias_Resume__2024_.pdf'
-    const downloadedFile=(url)=>{
-      const fileName = url.split('/').pop()
-      const aTag = document.createElement('a')
-      aTag.href=url
-      aTag.setAttribute('download',fileName)
-      document.body.appendChild(aTag)
-      aTag.click()
-      aTag.remove()
-    }
+    const RESUME_FILE = 'https://drive.google.com/file/d/1baP0Woeh3NmoleLKhJIaauYhkvt65qZ3/view?usp=sharing'
 
     return(
       <BrowserRouter>
@@ -37,7 +28,7 @@ export function Navbar(){
                 </div>
                     
                 <div className="col-md-4 p-1">
-                  <button onClick={()=>{downloadedFile(RESUME_FILE)}} className="btn btn-outline-primary" id="nav-button-color">Resume</button>
+                  <a href={RESUME_FILE} rel="noreferrer" target="_blank" className="btn btn-outline-primary" id="nav-button-color">Resume</a>
                 </div>
               </div>
             </div>

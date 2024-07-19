@@ -6,6 +6,7 @@ import React from 'react'
 import personalPortfolioImage from './imgs/personalPortfolio.png'
 import invManagementImage from './imgs/invManagementSystem.png'
 import chooseAdventureImage from './imgs/chooseAdventureGame.png'
+import UTRGVBannerImage from './imgs/UTRGVBannerImage.png'
 import {BrowserRouter} from "react-router-dom"
 import {HashLink as Link} from "react-router-hash-link"
 
@@ -31,8 +32,16 @@ function App() {
       cardImage: chooseAdventureImage,
       cardTitle: "Choose Your Own Adventure game",
       cardDescription: "Text-based adventure with this C++ console game, where players make pivotal decisions to navigate through a story. Immerse yourself in an interactive narrative, shaping your destiny with each choice in this dynamic and engaging choose-your-own-adventure experience.",
+      cardLink: "https://github.com/Jobeyy/Choose-Your-Own-Adventure-Game"
+    },
+
+    {
+      cardImage: UTRGVBannerImage,
+      cardTitle: "Choose Your Own Adventure game",
+      cardDescription: "Text-based adventure with this C++ console game, where players make pivotal decisions to navigate through a story. Immerse yourself in an interactive narrative, shaping your destiny with each choice in this dynamic and engaging choose-your-own-adventure experience.",
       cardLink: "https://github.com/Jobeyy/inventoryManagementSystem"
     }
+
   ]
   const [data, setData] = useState([]);
 
@@ -49,7 +58,7 @@ function App() {
     fetchData();
   }, []);
   
-  console.log(data)
+
   return (
     
       <div className='main-container p-0 m-0 flex-column main-background'>
@@ -67,7 +76,6 @@ function App() {
         </div>
         <div id="projectCards"className="row justify-content-center overflow-hidden">
         {projectCardTest.map((project, index) => (
-          
             <ProjectCard
               id={index}
               cardImage={project.cardImage}
