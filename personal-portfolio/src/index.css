@@ -55,10 +55,7 @@
   color: var(--accent);
 }
 
-.main-content{
-  height: 300px;
-  margin-top: 20px;
-}
+
 
 #nav-bar{
   height: 150px;
@@ -84,6 +81,10 @@
   width: 100%;
 }
 
+#experience-cards{
+  width: 100%;
+  height: 1000px;
+}
 
 
 

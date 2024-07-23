@@ -17,7 +17,11 @@ export function Navbar(){
                   <h2 className="nav-brand text-light">J<span id="primary-color">F</span></h2>
                 </div>
                 <div className="col p-2">
-                  <Link className="project text-light"to="#projects">Project's</Link>
+                  <Link className="project text-light"to="#experience">Experience's</Link>
+                </div>
+
+                <div className="col p-2">
+                  <Link className="project text-light"to="#projects">Projects's</Link>
                 </div>
 
                 <div className="col p-2">

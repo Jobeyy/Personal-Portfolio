@@ -1,4 +1,5 @@
 import { MainContent } from './components/MainContent';
+import ExperienceCard from './components/experienceCard';
 import ProjectCard from './components/ProjectCard';
 import { Navbar } from './components/navbar';
 import Technologies from './components/Technologies';
@@ -7,15 +8,27 @@ import personalPortfolioImage from './imgs/personalPortfolio.png'
 import invManagementImage from './imgs/invManagementSystem.png'
 import chooseAdventureImage from './imgs/chooseAdventureGame.png'
 import UTRGVBannerImage from './imgs/UTRGVBannerImage.png'
-import {BrowserRouter} from "react-router-dom"
-import {HashLink as Link} from "react-router-hash-link"
+import TNB from './imgs/TNB.png'
 
 import axios from 'axios'
 import {useEffect, useState} from 'react'
 
 function App() {
-  
+  const experienceCardTest = [
+    {
+      cardImage: TNB,
+      cardTitle: "Texas National Bank",
+      cardDescription: "During my internship at Texas National Bank, I reduced reporting time by 50% and improved operational efficiency by 20% through advanced SQL queries. I developed detailed financial summaries by integrating departmental data, aiding informed decision-making. Additionally, I designed a Python-based automation framework that transformed CSV file processing, cutting manual intervention by 75% and accelerating data handling by 60%."
+    }
+    ]
   const projectCardTest = [
+    {
+      cardImage: UTRGVBannerImage,
+      cardTitle: "UTRGV Banner Upload",
+      cardDescription: "Text-based adventure with this C++ console game, where players make pivotal decisions to navigate through a story. Immerse yourself in an interactive narrative, shaping your destiny with each choice in this dynamic and engaging choose-your-own-adventure experience.",
+      cardLink: "https://github.com/Jobeyy/inventoryManagementSystem"
+    },
+    
     {
       cardImage: personalPortfolioImage,
       cardTitle: "Personal Portfolio",
@@ -33,15 +46,7 @@ function App() {
       cardTitle: "Choose Your Own Adventure game",
       cardDescription: "Text-based adventure with this C++ console game, where players make pivotal decisions to navigate through a story. Immerse yourself in an interactive narrative, shaping your destiny with each choice in this dynamic and engaging choose-your-own-adventure experience.",
       cardLink: "https://github.com/Jobeyy/Choose-Your-Own-Adventure-Game"
-    },
-
-    {
-      cardImage: UTRGVBannerImage,
-      cardTitle: "Choose Your Own Adventure game",
-      cardDescription: "Text-based adventure with this C++ console game, where players make pivotal decisions to navigate through a story. Immerse yourself in an interactive narrative, shaping your destiny with each choice in this dynamic and engaging choose-your-own-adventure experience.",
-      cardLink: "https://github.com/Jobeyy/inventoryManagementSystem"
     }
-
   ]
   const [data, setData] = useState([]);
 
@@ -65,16 +70,33 @@ function App() {
         <div className="row overflow-hidden" id="nav-bar">
           <Navbar />
         </div>
-        <div className='row overflow-hidden w-100 main-content' >
+        <div className='row overflow-hidden main-content' >
           <MainContent />
         </div>
+        <div className="title overflow-hidden">
+          <h5>Experience: </h5>
+        </div>
+
+        <div className="row justify-content-center ">
+        {experienceCardTest.map((experience, index) => (
+          <ExperienceCard
+            id={index}
+            cardImage={experience.cardImage}
+            cardTitle={experience.cardTitle}
+            cardDescription={experience.cardDescription}
+            
+          />
+          ))}
+        </div>
+
+
         <div className="title overflow-hidden">
           <h5>Technologies: </h5>
         </div>
         <div className='tech overflow-hidden'>
           <Technologies/>
         </div>
-        <div id="projectCards"className="row justify-content-center overflow-hidden">
+        <div id="projectCards projects"className="row justify-content-center overflow-hidden">
         {projectCardTest.map((project, index) => (
             <ProjectCard
               id={index}
@@ -85,9 +107,7 @@ function App() {
             />
           ))}
         </div>
-        
       </div>
-    
   );
 }
 
