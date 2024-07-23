@@ -28,7 +28,7 @@
   </a>
 
 <h3 align="center">Personal Portfolio</h3>
-<a href="https://jobeyfarias.com/">
+<a href="https://jobeyfarias.com/">JobeyFarias.com</a>
 
   <p align="center">
     Created a sleek and dynamic personal portfolio using React for the frontend and Node.js for the backend. This modern website features showcase's React components for detailed project displays, and a skills and expertise segment. Additionally, include a resume/CV section, and SQLite for database calls
