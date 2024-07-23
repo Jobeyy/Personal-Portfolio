@@ -25,7 +25,7 @@ function App() {
     {
       cardImage: UTRGVBannerImage,
       cardTitle: "UTRGV Banner Upload",
-      cardDescription: "Text-based adventure with this C++ console game, where players make pivotal decisions to navigate through a story. Immerse yourself in an interactive narrative, shaping your destiny with each choice in this dynamic and engaging choose-your-own-adventure experience.",
+      cardDescription: " developed an automated data processing solution using Python and Tkinter, transforming a 20,000-row CSV file into four categorized outputs. This innovation significantly boosted data handling accuracy by 90%. By streamlining data workflows through advanced automation techniques, I cut manual processing time by 90%, leading to a 90% increase in overall operational efficiency.",
       cardLink: "https://github.com/Jobeyy/inventoryManagementSystem"
     },
     
