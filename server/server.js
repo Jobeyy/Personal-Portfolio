@@ -1,28 +1,60 @@
-const express = require('express')
+const express = require('express');
 const path = require('path');
-const mongoose = require('mongoose')
-const cors = require('cors'); 
-const username = encodeURIComponent("dbJobey")
-const password = encodeURIComponent("MCJJODRocks7!7")
+const sqlite3 = require('sqlite3').verbose(); // Import sqlite3
+const cors = require('cors');
 
-const PORT = 8080
+const PORT = 8080;
 
-mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.gcyfftt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
+// Create and connect to SQLite database
+const db = new sqlite3.Database('Experience.db', (err) => {
+  if (err) {
+    console.error('Error connecting to SQLite database:', err.message);
+  } else {
+    console.log('Connected to SQLite database.');
+  }
+});
 
-const app = express()
+const app = express();
 app.use(express.static(path.join(__dirname, 'static')));
 app.use(express.json());
-app.use(cors()); 
+app.use(cors());
 
-app.get('/data', async (req, res) => {
-  const data = await db.all(`SELECT * FROM projectCard`)
-	res.json(data)
+
+app.get('/projects-data', (req, res) => {
+  const query = 'SELECT * FROM Projects';
+  db.all(query, [], (err, rows) => {
+    if (err) {
+      console.error('Error fetching data:', err.message);
+      res.status(500).json({ error: 'Database query failed' });
+    } else {
+      res.json(rows);
+    }
+  });
+});
+
+app.get('/experience-data', (req, res) => {
+  const query = 'SELECT * FROM Experience';
+  db.all(query, [], (err, rows) => {
+    if (err) {
+      console.error('Error fetching data:', err.message);
+      res.status(500).json({ error: 'Database query failed' });
+    } else {
+      res.json(rows);
+    }
+  });
+});
+
+
+app.get('/experience-data-python', (req,res)=>{
+  const query = 'SELECT * FROM Experience WHERE '
 })
 
-app.get('/', (req, res) =>{
-  res.send("Hello World")
-})
+// Root route
+app.get('/', (req, res) => {
+  res.send('Hello World');
+});
 
-
-
-app.listen(PORT)
+// Start server
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
