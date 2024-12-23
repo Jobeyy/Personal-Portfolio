@@ -1,53 +1,37 @@
 const express = require('express');
 const path = require('path');
-const sqlite3 = require('sqlite3').verbose(); // Import sqlite3
 const cors = require('cors');
+const dotenv = require('dotenv');
+dotenv.config()
 
 const PORT = 8080;
+const connection = require('./db')
 
-// Create and connect to SQLite database
-const db = new sqlite3.Database('Experience.db', (err) => {
-  if (err) {
-    console.error('Error connecting to SQLite database:', err.message);
-  } else {
-    console.log('Connected to SQLite database.');
-  }
-});
+
 
 const app = express();
 app.use(express.static(path.join(__dirname, 'static')));
 app.use(express.json());
 app.use(cors());
 
-
-app.get('/projects-data', (req, res) => {
-  const query = 'SELECT * FROM Projects';
-  db.all(query, [], (err, rows) => {
-    if (err) {
-      console.error('Error fetching data:', err.message);
-      res.status(500).json({ error: 'Database query failed' });
-    } else {
-      res.json(rows);
+// Route to fetch all projects data
+app.get('/projects-data', async (req, res) => {
+  connection.query('SELECT * FROM `Projects`', (err, results)=>{
+    if (err){
+      return res.status(500).send('Error fetching data from database')
     }
-  });
+    res.json(results)
+  })
 });
 
-app.get('/experience-data', (req, res) => {
-  const query = 'SELECT * FROM Experience';
-  db.all(query, [], (err, rows) => {
-    if (err) {
-      console.error('Error fetching data:', err.message);
-      res.status(500).json({ error: 'Database query failed' });
-    } else {
-      res.json(rows);
+app.get('/experience-data', async (req, res) => {
+  connection.query('SELECT * FROM `Experience`', (err, results)=>{
+    if (err){
+      return res.status(500).send('Error fetching data from database')
     }
-  });
+    res.json(results)
+  })
 });
-
-
-app.get('/experience-data-python', (req,res)=>{
-  const query = 'SELECT * FROM Experience WHERE '
-})
 
 // Root route
 app.get('/', (req, res) => {
