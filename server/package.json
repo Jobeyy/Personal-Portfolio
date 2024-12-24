@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "build": "[my-framework] build --output public"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +15,7 @@
     "dotenv": "^16.4.7",
     "express": "^4.18.2",
     "mysql2": "^3.11.5",
-    "nodemon": "^3.0.2"
+    "nodemon": "^3.0.2",
+    "sqlite3": "^5.1.7"
   }
 }

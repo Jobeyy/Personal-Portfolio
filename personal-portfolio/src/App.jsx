@@ -69,6 +69,7 @@ function App() {
               cardTitle={project.cardTitle}
               cardDescription={project.cardDescription}
               cardLink={project.cardLink}
+              tech = {project.tech}
             />
           ))}
         </div>
