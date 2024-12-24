@@ -5,7 +5,7 @@ export function Navbar(){
     const linkedin = "https://www.linkedin.com/in/jobeyfarias/"
     const github = "https://github.com/Jobeyy"
     
-    const RESUME_FILE = 'https://drive.google.com/file/d/1h0oOGx7ZaNlWurDl4fl1KFe6OtGoiOXa/view?usp=sharing'
+    const RESUME_FILE = 'https://storage.googleapis.com/personal-portfolio-jf-actual/imgs/Jose%20Agustin%20Farias%20Resume%20(2025).pdf'
 
     return(
       <BrowserRouter>

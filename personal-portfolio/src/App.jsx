@@ -15,12 +15,10 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-          const projResponse = await axios.get('http://localhost:8080/projects-data');
-          const exprResponse = await axios.get('http://localhost:8080/experience-data');
+          const projResponse = await axios.get('https://portfolio-backend-skgo.onrender.com/projects-data');
+          const exprResponse = await axios.get('https://portfolio-backend-skgo.onrender.com/experience-data');
           setProjects(projResponse.data);
           setExperiences(exprResponse.data);
-          console.log(projResponse.data)
-          console.log(exprResponse.data)
       } catch(error) {
         
       }
@@ -43,7 +41,7 @@ function App() {
           <h5>Experience: </h5>
         </div>
 
-        <div className="row justify-content-center ">
+        <div className="row justify-content-center">
         {experiences.map((exp, index) => (
           <ExperienceCard
             id={index}
